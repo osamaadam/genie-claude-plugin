@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "genie-expense-tracker",
+  "displayName": "Genie Expense Tracker",
+  "version": "1.0.0",
+  "description": "Explore your Genie accounts, transactions, subscriptions, installments, and authorized financial SMS data.",
+  "author": {
+    "name": "Osama Adam",
+    "email": "osamaadamme@gmail.com",
+    "url": "https://github.com/osamaadam"
+  },
+  "homepage": "https://genie-mobile.duckdns.org/agents",
+  "repository": "https://github.com/osamaadam/genie-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "finance",
+    "expenses",
+    "transactions",
+    "subscriptions",
+    "installments",
+    "mcp"
+  ],
+  "defaultEnabled": false
+}

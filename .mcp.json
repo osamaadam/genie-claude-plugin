@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "genie": {
+      "type": "http",
+      "url": "https://genie-mobile.duckdns.org/mcp"
+    }
+  }
+}
