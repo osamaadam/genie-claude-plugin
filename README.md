@@ -21,6 +21,16 @@ The connector cannot create, change, delete, or pay anything.
 
 Once the plugin is published, open **Customize → Plugins → Browse plugins**, find **Genie Expense Tracker**, and select **Install**. Enable the plugin and complete the Genie authorization flow when Claude prompts you to connect.
 
+## Install from this repository
+
+In Claude or Claude Desktop, open **Customize → Plugins**, select **+ → Add marketplace**, and enter:
+
+```text
+https://github.com/osamaadam/genie-claude-plugin
+```
+
+After Claude adds the **Genie Plugins** marketplace, install **Genie Expense Tracker**, enable it, and complete the Genie authorization flow when prompted.
+
 ## Install for development
 
 Clone this repository, then run Claude Code from its parent directory:

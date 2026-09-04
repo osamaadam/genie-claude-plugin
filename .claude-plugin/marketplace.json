@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "genie-plugins",
+  "description": "Official Claude plugins for Genie Expense Tracker.",
+  "owner": {
+    "name": "Osama Adam",
+    "email": "osamaadamme@gmail.com",
+    "url": "https://github.com/osamaadam"
+  },
+  "plugins": [
+    {
+      "name": "genie-expense-tracker",
+      "source": "./",
+      "strict": true
+    }
+  ]
+}
