@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "genie-expense-tracker",
   "displayName": "Genie Expense Tracker",
-  "version": "1.0.0",
-  "description": "Explore your Genie accounts, transactions, subscriptions, installments, and authorized financial SMS data.",
+  "version": "1.1.0",
+  "description": "Read your private Genie accounts, transactions, net worth, investments, subscriptions, installments, and authorized financial SMS data.",
   "author": {
     "name": "Osama Adam",
     "email": "osamaadamme@gmail.com",
@@ -16,6 +16,8 @@
     "finance",
     "expenses",
     "transactions",
+    "investments",
+    "net-worth",
     "subscriptions",
     "installments",
     "mcp"

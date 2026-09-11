@@ -1,25 +1,19 @@
-# Genie Expense Tracker for Claude
+# Genie Expense Tracker plugin
 
-Connect Claude to your private Genie Expense Tracker data through Genie's read-only remote MCP server. The plugin adds the Genie connector and guidance for analyzing accounts, transactions, spending, income, subscriptions, and installment plans.
+Connect Claude, and compatible ChatGPT/Codex marketplace clients where they support Agent Plugins 1.0, to Genie's private read-only remote MCP server. The package includes the shared Agent Plugins manifest, Claude marketplace metadata, the Genie finance skill, and a Streamable HTTP MCP configuration.
 
-## What Claude can access
+## What Genie can provide
 
-After you authorize the connection, Claude can use these read-only tools:
+After you authorize the connection, Genie can provide read-only:
 
-- `list_accounts`
-- `search_transactions`
-- `get_transaction`
-- `aggregate_transactions`
-- `list_subscriptions`
-- `list_installments`
-- `search_sms` (requires separate `sms:read` permission)
-- `get_sms` (requires separate `sms:read` permission)
+- Account and card balances with `list_accounts`.
+- Transaction search, detail, and aggregation.
+- A net-worth snapshot with `get_net_worth`, including primary currency, valued accounts, excluded accounts, unvalued items, completeness, and valuation dates.
+- Investment positions and provider/account context with `list_investment_holdings` when investments are enabled and discoverable.
+- Subscription and installment summaries.
+- Stored financial SMS search and detail only with the separately authorized `sms:read` permission.
 
-The connector cannot create, change, delete, or pay anything.
-
-## Install from Claude's plugin directory
-
-Once the plugin is published, open **Customize → Plugins → Browse plugins**, find **Genie Expense Tracker**, and select **Install**. Enable the plugin and complete the Genie authorization flow when Claude prompts you to connect.
+The connector cannot create, change, delete, or pay anything. Net worth and holdings are snapshots, not returns or performance tracking. When a response is partial, follow its `is_complete`, inclusion/exclusion, valuation, and FX-date fields; never add `list_accounts` balances to reconstruct net worth.
 
 ## Install from this repository
 
@@ -29,7 +23,7 @@ In Claude or Claude Desktop, open **Customize → Plugins**, select **+ → Add 
 https://github.com/osamaadam/genie-claude-plugin
 ```
 
-After Claude adds the **Genie Plugins** marketplace, install **Genie Expense Tracker**, enable it, and complete the Genie authorization flow when prompted.
+Install **Genie Expense Tracker**, enable it, and complete the Genie authorization flow when prompted. The same repository contains an Agent Plugins 1.0 package for compatible ChatGPT/Codex marketplace clients where that package format is supported; client and workspace availability can differ.
 
 ## Install for development
 
@@ -39,7 +33,7 @@ Clone this repository, then run Claude Code from its parent directory:
 claude --plugin-dir ./genie-claude-plugin
 ```
 
-Open `/mcp` in Claude Code and complete OAuth for the `genie` server. You can also validate the package with:
+Open `/mcp` in Claude Code and complete OAuth for the `genie` server. You can also validate the Claude package with:
 
 ```sh
 claude plugin validate ./genie-claude-plugin --strict
@@ -47,7 +41,7 @@ claude plugin validate ./genie-claude-plugin --strict
 
 ## Connect without the plugin
 
-You can add the same remote MCP server directly:
+The same server is available directly over Streamable HTTP:
 
 ```sh
 claude mcp add --transport http genie https://genie-mobile.duckdns.org/mcp

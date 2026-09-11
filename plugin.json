@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "genie-expense-tracker",
+  "version": "1.1.0",
+  "description": "Read-only access to your Genie accounts, transactions, investments, and financial summaries.",
+  "author": {
+    "name": "Osama Adam",
+    "email": "osamaadamme@gmail.com",
+    "url": "https://github.com/osamaadam"
+  },
+  "homepage": "https://genie-mobile.duckdns.org/agents",
+  "repository": "https://github.com/osamaadam/genie-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "finance",
+    "expenses",
+    "transactions",
+    "investments",
+    "net-worth",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Genie Expense Tracker",
+        "shortDescription": "Read your private Genie financial data.",
+        "longDescription": "Connect to Genie for read-only account, transaction, net-worth, investment, subscription, installment, and authorized SMS summaries. Values are snapshots with explicit valuation dates; incomplete valuations are disclosed.",
+        "developerName": "Osama Adam",
+        "category": "Finance",
+        "capabilities": [
+          "Read"
+        ],
+        "websiteURL": "https://genie-mobile.duckdns.org/agents",
+        "privacyPolicyURL": "https://genie-mobile.duckdns.org/privacy",
+        "termsOfServiceURL": "https://genie-mobile.duckdns.org/terms",
+        "defaultPrompt": [
+          "What is my current net worth?",
+          "Show my investment holdings and valuation dates.",
+          "Summarize my spending by category."
+        ],
+        "brandColor": "#0A5D4F",
+        "composerIcon": "./assets/composer-icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}
